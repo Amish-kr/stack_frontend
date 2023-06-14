@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const API = axios.create({ baseURL: process.env.NODE_ENV });
+const API = axios.create({ baseURL: process.env.REACT_APP_NODE_ENV });
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("Profile")) {
     req.headers.authorization = `Bearer ${
